@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   get "/single_movie", controller: "movies", action: "single_movie"
 
+  get "/year_order", controller: "movies", action: "year_order"
+
 end
