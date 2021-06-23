@@ -1,17 +1,24 @@
 Rails.application.routes.draw do
   
-  get "/single_actor", controller: "actors", action: "actor_id"
 
-  get "/all_movies", controller: "movies", action: "all_movies"
+  get "/actors" => "actors#index"
 
-  get "/single_movie", controller: "movies", action: "single_movie"
+  post "/actors" => "actors#create"
 
-  get "/year_order", controller: "movies", action: "year_order"
+  get "/actors/:id" => "actors#show"
 
-  get "/query_param", controller: "actors", action: "single_actor"
+  patch "/actors/:id" => "actors#update"
 
-  get "segurl_param/:actor", controller: "actors", action: "single_actor"
+  delete "/actors/:id" => "actors#destroy"
 
-  post "body_param", controller: "actors", action: "single_actor"
+  get "/movies" => "movies#index"
+
+  post "/movies" => "movies#create"
+
+  get "/movies/:id" => "movies#show"
+
+  patch "/movies/:id" => "movies#update"
+
+  delete "/movies/:id" => "movies#destroy"
 
 end
